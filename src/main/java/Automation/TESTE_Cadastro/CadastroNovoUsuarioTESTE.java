@@ -1,21 +1,21 @@
-package Automation.TESTE;
+package Automation.TESTE_Cadastro;
 
 import java.util.Random;
 
 import org.junit.Test;
 
-import Automation.PAGE.CadastroPage;
+import Automation.PAGE_Cadastro.CadastroNovoUsuarioPAGE;
+ 
+public class CadastroNovoUsuarioTESTE extends CadastroNovoUsuarioBaseTESTE{
 
-public class CadastroTeste extends BaseTeste {
-
-	CadastroPage cadastro = new CadastroPage();
+	CadastroNovoUsuarioPAGE cadastro = new CadastroNovoUsuarioPAGE();
 	Random random = new Random(); 
 	
 	@Test
 	public void CriarCadastroUsuario() throws InterruptedException { 
 				
 		int numeroRandomico = random.nextInt(1000);
-		//cadastro.acessarTelaInicialProducao("http://automationpractice.com/index.php");
+		cadastro.acessarTelaInicialProducao("http://automationpractice.com/index.php");
 		cadastro.clicarSignIn();
 		cadastro.escreverEmail("Teste"+numeroRandomico+"@gmail.com");
 		cadastro.clicarCriarNovaConta();

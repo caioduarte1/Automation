@@ -1,4 +1,4 @@
-package Automation.TESTE;
+package Automation.TESTE_Cadastro;
 
 import static Automation.CORE.DriverFactory.getdDriver;
 import static Automation.CORE.DriverFactory.killDriver;
@@ -18,7 +18,7 @@ import Automation.CORE.Propriedades;
 import Automation.PAGE.BasePAGE;
 import Automation.PAGE.LoginPAGE;
 
-public class BaseTESTE extends BasePAGE{
+public class CadastroNovoUsuarioBaseTESTE extends BasePAGE{
 	
 	LoginPAGE login = new LoginPAGE();
 
@@ -32,10 +32,6 @@ public class BaseTESTE extends BasePAGE{
 	
 	public void logarEmProducao() {
 		login.acessarTelaInicialProducao("http://automationpractice.com/index.php");
-		login.clicarSignIn();
-		login.escreverEmail("Teste638@gmail.com");
-		login.escreverSenha("123123");
-		login.clicarLogar();
 	}
 	
 	@After

@@ -2,9 +2,10 @@ package Automation.PAGE;
 
 import static Automation.CORE.DriverFactory.getdDriver;
 
+
 import org.openqa.selenium.By;
 
-public class BasePage {
+public class BasePAGE {
 
 	public void acessarURL(String url) {
 		getdDriver().get(url);
@@ -29,5 +30,6 @@ public class BasePage {
 	public String obterValorCampoCss(String cssSelector) {
 		return getdDriver().findElement(By.cssSelector(cssSelector)).getText();
 	}
+
 
 }

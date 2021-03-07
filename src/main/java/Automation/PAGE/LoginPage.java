@@ -1,6 +1,6 @@
 package Automation.PAGE;
 
-public class LoginPage extends BasePage {
+public class LoginPAGE extends BasePAGE {
 
 	public void acessarTelaInicialProducao(String url) {
 		acessarURL(url);

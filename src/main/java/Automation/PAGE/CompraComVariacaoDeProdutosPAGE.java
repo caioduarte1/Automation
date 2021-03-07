@@ -1,20 +1,19 @@
-package Automation.PAGE_Produtos;
+package Automation.PAGE;
 
-import Automation.PAGE.BasePage;
+public class CompraComVariacaoDeProdutosPAGE extends BasePAGE{
 
-public class ComprarDressesPage extends BasePage {
 
-	public void clicarDresses() {
-		clicarViaCss(".sf-menu > li:nth-child(2) > a:nth-child(1)");
+	public void inserirNaBusca(String busca) {
+		escreverViaCss("#search_query_top", busca);
 	}
 
+	public void clicarBusca() {
+		clicarViaCss("#searchbox > button");
+	}
+		
 	public void selecionarCasual() {
 		clicarViaCss(
-				"#subcategories > ul:nth-child(2) > li:nth-child(1) > div:nth-child(1) > a:nth-child(1) > img:nth-child(1)");
-	}
-
-	public void confirmarSelecionadoCasual() {
-		clicarViaCss(".product_img_link > img:nth-child(1)");
+				"li.ajax_block_product:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > a:nth-child(1) > img:nth-child(1)");
 	}
 
 	public void addToCard() {
@@ -44,13 +43,13 @@ public class ComprarDressesPage extends BasePage {
 	public void bankWirePayment() {
 		clicarViaCss(".bankwire > span:nth-child(1)");
 	}
+	
+	public void payByCheck() {
+		clicarViaCss(".cheque > span:nth-child(1)");
+	}
 
-	public void confirmacaoTransferencia() {
+	public void clicarConfirmacaoTransferencia() {
 		clicarViaCss("button.button-medium > span:nth-child(1)");
 	}
-
-	public String retornaConfirmacaoAprovada() {
-		return obterValorCampoCss(".cheque-indent > strong:nth-child(1)");
-	}
-
+	
 }

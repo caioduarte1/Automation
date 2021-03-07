@@ -1,6 +1,8 @@
-package Automation.PAGE;
+package Automation.PAGE_Cadastro;
 
-public class CadastroPage extends BasePage{
+import Automation.PAGE.BasePAGE;
+
+public class CadastroNovoUsuarioPAGE extends BasePAGE{
 
 	public void acessarTelaInicialProducao(String url) {
 		acessarURL(url);
