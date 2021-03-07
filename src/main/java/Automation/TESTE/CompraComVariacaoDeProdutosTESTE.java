@@ -55,8 +55,5 @@ public class CompraComVariacaoDeProdutosTESTE extends BaseTESTE {
 		}
 		ccvp.esperarPor2s();
 		ccvp.clicarConfirmacaoTransferencia();
-	
 	}
-	
-	
 }

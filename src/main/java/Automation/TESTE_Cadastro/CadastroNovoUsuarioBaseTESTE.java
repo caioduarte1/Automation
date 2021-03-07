@@ -14,6 +14,11 @@ import org.junit.rules.TestName;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+
 import Automation.CORE.Propriedades;
 import Automation.PAGE.BasePAGE;
 import Automation.PAGE.LoginPAGE;
@@ -32,6 +37,18 @@ public class CadastroNovoUsuarioBaseTESTE extends BasePAGE{
 	
 	public void logarEmProducao() {
 		login.acessarTelaInicialProducao("http://automationpractice.com/index.php");
+	}
+	
+	@After
+	public void registraRelatorio() {
+		
+		ExtentHtmlReporter reporter = new ExtentHtmlReporter("./reports/"+testname.getMethodName()+".html");
+		
+		ExtentReports extent = new ExtentReports();
+		extent.attachReporter(reporter);
+		ExtentTest logger = extent.createTest(testname.getMethodName());
+		logger.log(Status.INFO, "Log");
+		extent.flush();
 	}
 	
 	@After
