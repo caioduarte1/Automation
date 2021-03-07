@@ -16,7 +16,7 @@ Nome do projeto :  Automation
 
 ❏ Instruções de execução
 
-   - Premissa: Obter java(jdk) e driver ( firefox/chrome/Hadless) previamente no path;
+   - Premissa: Obter java(jdk) e os driver ( firefox/chrome/Hadless) previamente no path;
    - Java utilizado na construção na versão 11.0.7;
    - Clicar com mouse direto, selecione "Run As", utilize Junit para executá-lo;
 
