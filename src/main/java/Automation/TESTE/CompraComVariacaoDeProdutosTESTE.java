@@ -20,7 +20,7 @@ public class CompraComVariacaoDeProdutosTESTE extends BaseTESTE {
 	public String produto;
 	@Parameter(value = 1)
 	public String pagamento;
-		
+
 	@Parameters
 	public static Collection<Object[]> getCollection(){
 		return Arrays.asList(new Object[][]{
@@ -38,10 +38,17 @@ public class CompraComVariacaoDeProdutosTESTE extends BaseTESTE {
 		ccvp.inserirNaBusca(produto);
 		ccvp.clicarBusca();	
 		ccvp.esperarPor2s();
-		ccvp.selecionarCasual();
+		if(produto.equals("Dresses")) {
+			ccvp.selecionarVestido();
+		}
+		if(produto.equals("T-Shirts")) {
+			ccvp.selecionarCamisa();
+		}
+		ccvp.esperarPor2s();
 		ccvp.addToCard();
 		ccvp.esperarPor2s();
 		ccvp.addItemNocheckout();
+		ccvp.esperarPor2s();
 		ccvp.procedToCheckout();
 		ccvp.procedToCheckoutEndereco();
 		ccvp.acertoDeServico();

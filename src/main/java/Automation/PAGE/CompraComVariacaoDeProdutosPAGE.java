@@ -11,13 +11,17 @@ public class CompraComVariacaoDeProdutosPAGE extends BasePAGE{
 		clicarViaCss("#searchbox > button");
 	}
 		
-	public void selecionarCasual() {
+	public void selecionarVestido() {
 		clicarViaCss(
-				"li.ajax_block_product:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > a:nth-child(1) > img:nth-child(1)");
+				"#best-sellers_block_right > div > ul > li:nth-child(1) > a > img");
 	}
 
+	public void selecionarCamisa() {
+		clicarViaCss(
+				"#best-sellers_block_right > div > ul > li:nth-child(2) > div > h5 > a");
+	}
 	public void addToCard() {
-		clicarViaCss("button.exclusive > span:nth-child(1)");
+		clicarViaCss("#add_to_cart > button > span");
 	}
 
 	public void addItemNocheckout() {

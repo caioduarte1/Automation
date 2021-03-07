@@ -26,7 +26,7 @@ public class BasePAGE {
 	public void esperarPor2s() throws InterruptedException {
 		Thread.sleep(2000);
 	}
-
+	
 	public String obterValorCampoCss(String cssSelector) {
 		return getdDriver().findElement(By.cssSelector(cssSelector)).getText();
 	}
