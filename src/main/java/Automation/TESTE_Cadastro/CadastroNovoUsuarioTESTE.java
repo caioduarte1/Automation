@@ -19,7 +19,7 @@ public class CadastroNovoUsuarioTESTE extends CadastroNovoUsuarioBaseTESTE{
 		cadastro.clicarSignIn();
 		cadastro.escreverEmail("Teste"+numeroRandomico+"@gmail.com");
 		cadastro.clicarCriarNovaConta();
-		cadastro.esperarPor2s();
+		cadastro.esperaImplicita();
 		cadastro.clicarRadioBoxSexoMasc();
 		cadastro.inserirFirstNameYPI("Name");
 		cadastro.inserirLastNameYPI("LastName"); 

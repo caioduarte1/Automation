@@ -41,9 +41,7 @@ public class CadastroNovoUsuarioBaseTESTE extends BasePAGE{
 	
 	@After
 	public void registraRelatorio() {
-		
 		ExtentHtmlReporter reporter = new ExtentHtmlReporter("./reports/"+testname.getMethodName()+".html");
-		
 		ExtentReports extent = new ExtentReports();
 		extent.attachReporter(reporter);
 		ExtentTest logger = extent.createTest(testname.getMethodName());

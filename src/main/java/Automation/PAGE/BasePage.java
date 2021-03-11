@@ -2,6 +2,7 @@ package Automation.PAGE;
 
 import static Automation.CORE.DriverFactory.getdDriver;
 
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 
@@ -23,8 +24,8 @@ public class BasePAGE {
 		return getdDriver().findElement(By.cssSelector(cssSelector)).getText();
 	}
 
-	public void esperarPor2s() throws InterruptedException {
-		Thread.sleep(2000);
+	public void esperaImplicita() {
+		getdDriver().manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	}
 	
 	public String obterValorCampoCss(String cssSelector) {

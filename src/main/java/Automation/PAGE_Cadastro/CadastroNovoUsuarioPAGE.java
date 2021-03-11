@@ -1,5 +1,9 @@
 package Automation.PAGE_Cadastro;
 
+import static Automation.CORE.DriverFactory.getdDriver;
+
+import java.util.concurrent.TimeUnit;
+
 import Automation.PAGE.BasePAGE;
 
 public class CadastroNovoUsuarioPAGE extends BasePAGE{
@@ -88,8 +92,8 @@ public class CadastroNovoUsuarioPAGE extends BasePAGE{
 		escreverViaCss("#phone_mobile", coutry);
 	} 
 	
-	public void esperarPor2s() throws InterruptedException {
-		Thread.sleep(2000);
+	public void esperaImplicita() {
+		getdDriver().manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	}
 	
 	public void clicarRegistrar(){

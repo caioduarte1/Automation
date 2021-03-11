@@ -34,33 +34,33 @@ public class CompraComVariacaoDeProdutosTESTE extends BaseTESTE {
 	@Test
 	public void produtosVariaveis() throws InterruptedException {
 		
-		ccvp.esperarPor2s();
+		ccvp.esperaImplicita();
 		ccvp.inserirNaBusca(produto);
 		ccvp.clicarBusca();	
-		ccvp.esperarPor2s();
+		ccvp.esperaImplicita();
 		if(produto.equals("Dresses")) {
 			ccvp.selecionarVestido();
 		}
 		if(produto.equals("T-Shirts")) {
 			ccvp.selecionarCamisa();
 		}
-		ccvp.esperarPor2s();
+		ccvp.esperaImplicita();
 		ccvp.addToCard();
-		ccvp.esperarPor2s();
+		ccvp.esperaImplicita();
 		ccvp.addItemNocheckout();
-		ccvp.esperarPor2s();
+		ccvp.esperaImplicita();
 		ccvp.procedToCheckout();
 		ccvp.procedToCheckoutEndereco();
 		ccvp.acertoDeServico();
 		ccvp.shippingProceedToCheckou();
-		ccvp.esperarPor2s();
+		ccvp.esperaImplicita();
 		if(pagamento.equals("Transferencia")) {
 			ccvp.bankWirePayment();
 		}
 		if(pagamento.equals("Check")) {
 			ccvp.payByCheck();
 		}
-		ccvp.esperarPor2s();
+		ccvp.esperaImplicita();
 		ccvp.clicarConfirmacaoTransferencia();
 	}
 }
