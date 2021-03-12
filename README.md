@@ -26,7 +26,7 @@ Nome do projeto :  Automation
    - Está dentro do package do projeto, na pasta reports;
 
 ❏ Registro de imagens
-   - Está na pasta Target>Screenshot;
+   - Está dentro do package do projeto, na pasta target>Screenshot;
 
 ❏ Autor
 
