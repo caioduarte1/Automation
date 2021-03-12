@@ -16,7 +16,7 @@ Nome do projeto :  Automation
 
 ❏ Instruções de execução
 
-   - Premissa: Obter java(jdk) e os driver ( firefox/chrome/Hadless) previamente no path;
+   - Premissa: Obter java(jdk) e os driver ( firefox/chrome/Hadless) previamente no path do S.O.;
    - Java utilizado na construção na versão 11.0.7;
    - Ir na classe SuiteTESTE.java, clicar com mouse direto, selecione "Run As", utilize Junit para executá-lo;
    - Para alterar a execução do navegador, ir no package .CORE, na classe Propriedades.java;
