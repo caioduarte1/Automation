@@ -22,6 +22,12 @@ Nome do projeto :  Automation
    - Para alterar a execução do navegador, ir no package .CORE, na classe Propriedades.java;
 
 
+❏ Relatórios 
+   - Está dentro do package do projeto, na pasta reports;
+
+❏ Registro de imagens
+   - Está na pasta Target>Screenshot;
+
 ❏ Autor
 
 
