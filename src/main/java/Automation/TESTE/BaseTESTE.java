@@ -1,4 +1,4 @@
-package Automation.TESTE_Cadastro;
+package Automation.TESTE;
 
 import static Automation.CORE.DriverFactory.getdDriver;
 import static Automation.CORE.DriverFactory.killDriver;
@@ -7,10 +7,6 @@ import java.io.File;
 import java.io.IOException;
 
 import org.apache.commons.io.FileUtils;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Rule;
-import org.junit.rules.TestName;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
@@ -21,24 +17,11 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
 import Automation.CORE.Propriedades;
 import Automation.PAGE.BasePAGE;
-import Automation.PAGE.LoginPAGE;
+import io.cucumber.java.After;
 
-public class CadastroNovoUsuarioBaseTESTE extends BasePAGE{
+public class BaseTESTE extends BasePAGE{
 	
-	LoginPAGE login = new LoginPAGE();
 
-	@Rule
-	public TestName testname = new TestName();
-	
-	@Before
-	public void inicializa() throws InterruptedException {
-		logarEmProducao();
-	}
-	
-	public void logarEmProducao() {
-		login.acessarTelaInicialProducao("http://automationpractice.com/index.php");
-	}
-	
 	@After
 	public void registraRelatorio() {
 		ExtentHtmlReporter reporter = new ExtentHtmlReporter("./reports/"+testname.getMethodName()+".html");
